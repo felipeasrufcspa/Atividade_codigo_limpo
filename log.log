@@ -1,6 +1,16 @@
-* 065d672 : Variaveis renomeadas
-* deba66a : Melhorada identação
-* b9640c6 : add comentarios
+*   270873b : Merge branch 'master' of https://github.com/felipeasrufcspa/Atividade_codigo_limpo
+|\  
+| *   3e2954e : Merge pull request #2 from felipeasrufcspa/atividade_tecnicas
+| |\  
+| | *   b9ac4fb : Merge pull request #1 from felipeasrufcspa/dev
+| | |\  
+| | | * 065d672 : Variaveis renomeadas
+| | | * deba66a : Melhorada identação
+| | |/  
+| | * b9640c6 : add comentarios
+| |/  
+* / 37f57f8 : log
+|/  
 * 7d38263 : Create README.md
 * ffb1970 : add Codigo sem alteração
 * 9e15b89 : exclusão
