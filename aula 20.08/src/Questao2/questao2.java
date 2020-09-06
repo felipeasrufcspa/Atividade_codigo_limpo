@@ -2,21 +2,18 @@ package Questao2;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JSplitPane;
-import javax.swing.JButton;
-import javax.swing.JScrollPane;
-import javax.swing.JLabel;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.border.EmptyBorder;
 
 public class questao2 extends JFrame {
 
@@ -50,13 +47,15 @@ public class questao2 extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setResizable(false);
 		setContentPane(contentPane);
-		
-		JSplitPane splitPane = new JSplitPane();
-		contentPane.add(splitPane, BorderLayout.CENTER);
-		
+		// jsplite para poder utilizar dois panel no mesmo contane
+		JSplitPane DoisPanel = new JSplitPane();
+		contentPane.add(DoisPanel, BorderLayout.CENTER);
+		// lendo a imgem com imageIcon
 		ImageIcon img = new ImageIcon(getClass().getResource("/icons/homer2.jpg"));
+		
+		
+		// instanciando as variaveis para conseguir o nome,altura e largur da imagem 
 		String name = "homer2.jpg";
-		//String nome  = img.toString();
 		int altura = img.getIconHeight();
 		int largura = img.getIconWidth();
 		
@@ -64,12 +63,12 @@ public class questao2 extends JFrame {
 		Imagem.setIcon(img);
 		
 		
-		
+		//label dos paineis 
 		JScrollPane scrollPane = new JScrollPane(Imagem);
-		splitPane.setLeftComponent(scrollPane);
+		DoisPanel.setLeftComponent(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
-		splitPane.setRightComponent(panel_1);
+		DoisPanel.setRightComponent(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Nome da Imagem:"+ name);
@@ -90,7 +89,7 @@ public class questao2 extends JFrame {
 		JButton btnNewButton = new JButton("Sair");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
+				System.exit(0);//saindo da aplicação
 			}
 		});
 		panel.add(btnNewButton);
