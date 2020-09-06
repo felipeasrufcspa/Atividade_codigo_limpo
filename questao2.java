@@ -2,7 +2,6 @@ package Questao2;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -19,12 +18,8 @@ import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class questao2 extends JFrame {
-
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,10 +33,6 @@ public class questao2 extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 * @throws IOException 
-	 */
 	public questao2() throws IOException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 420, 318);
@@ -53,10 +44,9 @@ public class questao2 extends JFrame {
 		
 		JSplitPane DoisPanel = new JSplitPane();
 		contentPane.add(DoisPanel, BorderLayout.CENTER);
+		
 		//lendo a imagem
 		ImageIcon img = new ImageIcon(getClass().getResource("/icons/homer2.jpg"));
-		
-		
 		
 		String name = "homer2.jpg";
 		int altura = img.getIconHeight();
@@ -64,7 +54,6 @@ public class questao2 extends JFrame {
 		
 		JLabel Imagem = new JLabel("");
 		Imagem.setIcon(img);
-		
 		
 		//label dos paineis 
 		JScrollPane scrollPane = new JScrollPane(Imagem);
@@ -92,9 +81,10 @@ public class questao2 extends JFrame {
 		JButton btnNewButton = new JButton("Sair");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);//saindo da aplicação
+				System.exit(0);
 			}
 		});
+		
 		panel.add(btnNewButton);
 	}
 }
