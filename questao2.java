@@ -1,4 +1,4 @@
-package Questao2;
+package questao2;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -9,11 +9,8 @@ import javax.swing.JSplitPane;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 
@@ -42,49 +39,49 @@ public class questao2 extends JFrame {
 		setResizable(false);
 		setContentPane(contentPane);
 		
-		JSplitPane DoisPanel = new JSplitPane();
-		contentPane.add(DoisPanel, BorderLayout.CENTER);
+		JSplitPane jSplitPane = new JSplitPane();
+		contentPane.add(jSplitPane, BorderLayout.CENTER);
 		
 		//lendo a imagem
-		ImageIcon img = new ImageIcon(getClass().getResource("/icons/homer2.jpg"));
+		ImageIcon carregaImagem = new ImageIcon(getClass().getResource("/icons/homer2.jpg"));
 		
 		String name = "homer2.jpg";
-		int altura = img.getIconHeight();
-		int largura = img.getIconWidth();
+		int altura = carregaImagem.getIconHeight();
+		int largura = carregaImagem.getIconWidth();
 		
 		JLabel Imagem = new JLabel("");
-		Imagem.setIcon(img);
+		Imagem.setIcon(carregaImagem);
 		
 		//label dos paineis 
 		JScrollPane scrollPane = new JScrollPane(Imagem);
-		DoisPanel.setLeftComponent(scrollPane);
+		jSplitPane.setLeftComponent(scrollPane);
 		
-		JPanel panel_1 = new JPanel();
-		DoisPanel.setRightComponent(panel_1);
-		panel_1.setLayout(null);
+		JPanel panelTop = new JPanel();
+		jSplitPane.setRightComponent(panelTop);
+		panelTop.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Nome da Imagem:"+ name);
-		lblNewLabel.setBounds(10, 11, 191, 14);
-		panel_1.add(lblNewLabel);
+		JPanel panelDown = new JPanel();
+		contentPane.add(panelDown, BorderLayout.SOUTH);
 		
-		JLabel lblNewLabel_1 = new JLabel("Largura da Imagem: "+largura);
-		lblNewLabel_1.setBounds(10, 94, 181, 14);
-		panel_1.add(lblNewLabel_1);
+		JLabel lblnome = new JLabel("Nome da Imagem:"+ name);
+		lblnome.setBounds(10, 11, 191, 14);
+		panelDown.add(lblnome);
 		
-		JLabel lblNewLabel_2 = new JLabel("Altura da Imagem: "+ altura);
-		lblNewLabel_2.setBounds(10, 184, 181, 14);
-		panel_1.add(lblNewLabel_2);
+		JLabel lblLargura = new JLabel("Largura da Imagem: "+largura);
+		lblLargura.setBounds(10, 94, 181, 14);
+		panelDown.add(lblLargura);
 		
-		JPanel panel = new JPanel();
-		contentPane.add(panel, BorderLayout.SOUTH);
+		JLabel lblAltura = new JLabel("Altura da Imagem: "+ altura);
+		lblAltura.setBounds(10, 184, 181, 14);
+		panelDown.add(lblAltura);
 		
-		JButton btnNewButton = new JButton("Sair");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton botaoSair = new JButton("Sair");
+		botaoSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.exit(0);
 			}
 		});
 		
-		panel.add(btnNewButton);
+		panelDown.add(botaoSair);
 	}
 }
