@@ -53,7 +53,7 @@ public class questao2 extends JFrame {
 		
 		JSplitPane DoisPanel = new JSplitPane();
 		contentPane.add(DoisPanel, BorderLayout.CENTER);
-		
+		//lendo a imagem
 		ImageIcon img = new ImageIcon(getClass().getResource("/icons/homer2.jpg"));
 		
 		
@@ -92,7 +92,7 @@ public class questao2 extends JFrame {
 		JButton btnNewButton = new JButton("Sair");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
+				System.exit(0);//saindo da aplicação
 			}
 		});
 		panel.add(btnNewButton);
